@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 0 10px; }
-        .task-item { border: 1px solid #ccc; padding: 10px; margin-bottom: 8px; border-radius: 4px; }
-        .completed { text-decoration: line-through; opacity: 0.7; }
-        #status-message { color: red; margin: 10px 0; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Team Project – IT</p>
+        <h1>Task Manager</h1>
+        <p class="subtitle">A simple Supabase-powered task tracker.</p>
+      </div>
+      <div class="student-card">
+        <span class="label">Student ID</span>
+        <strong id="student-id">72564</strong>
+      </div>
+    </header>
 
-    <h1>Task Manager</h1>
-    <div>Student ID: <span id="student-id">72564</span></div>
+    <section class="panel">
+      <h2 id="form-title">Add Task</h2>
+      <form id="task-form">
+        <input type="hidden" id="task-id" value="" />
+        <label for="task-title">Task title</label>
+        <input id="task-title" type="text" required maxlength="200" placeholder="Enter task title" />
 
-    <div id="status-message"></div>
+        <label for="task-description">Task description</label>
+        <textarea id="task-description" rows="4" placeholder="Enter optional task description"></textarea>
 
-    <form id="task-form" style="margin: 20px 0;">
-        <input type="hidden" id="task-edit-id" value="">
-        <input type="text" id="task-title" placeholder="Task title" required><br><br>
-        <textarea id="task-description" placeholder="Task description"></textarea><br><br>
-        <button type="submit" id="task-submit">Add Task</button>
-    </form>
+        <div class="actions-row">
+          <button id="task-submit" type="submit">Add Task</button>
+          <button id="task-cancel" type="button" class="secondary hidden">Cancel Edit</button>
+        </div>
+      </form>
+      <p id="status-message" class="status" aria-live="polite"></p>
+    </section>
 
-    <div id="task-list"></div>
+    <section class="panel">
+      <div class="section-heading">
+        <h2>Tasks</h2>
+        <button id="refresh-tasks" type="button" class="secondary">Refresh</button>
+      </div>
+      <div id="task-list" class="task-list" aria-live="polite"></div>
+    </section>
 
-    <hr>
-    <a id="contribution-link" href="contribution.html">View Team Contribution</a>
+    <footer class="footer">
+      <a id="contribution-link" href="contribution.html">Go to Team Contribution</a>
+    </footer>
+  </main>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Team Contribution</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Contribution</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Team Contribution</h1>
-    
-    <button id="load-contributor">Show Contributor</button>
-    <p>Contributor Student ID: <span id="contributor-student-id"></span></p>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Team Contribution</p>
+        <h1>Team Contribution</h1>
+        <p class="subtitle">This page loads contributor details from contribution.json.</p>
+      </div>
+    </header>
 
-    <br>
-    <a href="index.html">Back to Task Manager</a>
+    <section class="panel">
+      <button id="load-contributor" type="button">Show Contributor</button>
+      <p id="contributor-student-id" class="status" aria-live="polite"></p>
+      <p class="status">Click the button to read the contributor ID from the JSON file.</p>
+    </section>
 
-    <script>
-        document.getElementById('load-contributor').addEventListener('click', async () => {
-            try {
-                const res = await fetch('contribution.json');
-                const data = await res.json();
-                document.getElementById('contributor-student-id').innerText = data.contributorStudentId;
-            } catch (err) {
-                console.error('Error loading contributor data:', err);
-            }
-        });
-    </script>
+    <footer class="footer">
+      <a href="index.html">Back to Task Manager</a>
+    </footer>
+  </main>
+
+  <script>
+    const loadButton = document.getElementById('load-contributor');
+    const output = document.getElementById('contributor-student-id');
+
+    loadButton.addEventListener('click', async () => {
+      output.textContent = 'Loading contributor...';
+      try {
+        const response = await fetch('contribution.json', { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error(`Could not load contribution.json (${response.status})`);
+        }
+        const data = await response.json();
+        if (!data || !data.contributorStudentId) {
+          throw new Error('Missing contributorStudentId in contribution.json');
+        }
+        output.textContent = `Contributor Student ID: ${data.contributorStudentId}`;
+      } catch (error) {
+        output.textContent = `Error: ${error.message}`;
+      }
+    });
+  </script>
 </body>
 </html>

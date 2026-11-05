@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #f6f8fb;
+  --panel: #ffffff;
+  --text: #122033;
+  --muted: #5e6a7d;
+  --border: #d8e0ea;
+  --accent: #2a63ff;
+  --accent-hover: #1f4fd1;
+  --danger: #c63d4f;
+  --success: #1c7c54;
+  --shadow: 0 10px 30px rgba(18, 32, 51, 0.08);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #eef3fb 0%, var(--bg) 100%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(980px, calc(100% - 2rem));
+  margin: 2rem auto 3rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 .25rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .8rem;
+  color: var(--muted);
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.subtitle {
+  margin: .45rem 0 0;
+  color: var(--muted);
+}
+
+.student-card {
+  min-width: 160px;
+  padding: 1rem 1.1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: right;
+}
+
+.student-card .label {
+  display: block;
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: .25rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  box-shadow: var(--shadow);
+}
+
+label {
+  display: block;
+  margin: .85rem 0 .35rem;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: .9rem 1rem;
+  background: #fff;
+  color: var(--text);
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid rgba(42, 99, 255, 0.15);
+  border-color: var(--accent);
+}
+
+.actions-row, .section-heading {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: .85rem 1rem;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: transform .08s ease, background .2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.secondary {
+  background: #e9eef7;
+  color: var(--text);
+}
+
+button.secondary:hover {
+  background: #dde6f5;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: #aa2f3f;
+}
+
+button.success {
+  background: var(--success);
+}
+
+button.success:hover {
+  background: #156343;
+}
+
+.status {
+  min-height: 1.4em;
+  margin: .9rem 0 0;
+  color: var(--muted);
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+.status.success {
+  color: var(--success);
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.task-item {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem;
+  background: #fbfcfe;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.task-item.completed {
+  opacity: .84;
+  background: #f3f8f3;
+}
+
+.task-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.task-description {
+  color: var(--muted);
+  white-space: pre-wrap;
+  min-height: 1.5em;
+}
+
+.task-status {
+  font-size: .92rem;
+  font-weight: 600;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: .25rem;
+}
+
+.footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .student-card {
+    text-align: left;
+  }
+
+  .app-shell {
+    width: min(100% - 1rem, 980px);
+    margin-top: .5rem;
+  }
+
+  .panel {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+}
