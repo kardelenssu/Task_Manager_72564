@@ -11,11 +11,11 @@ Task Manager is a simple web application built with HTML, CSS, and JavaScript. I
 ## Project links
 
 - **GitHub repository:** https://github.com/kardelenssu/vistula-task-manager
-- **Application URL (check after enabling Pages):** https://kardelenssu.github.io/vistula-task-manager/
-- **Contribution page (check after enabling Pages):** https://kardelenssu.github.io/vistula-task-manager/contribution.html
-- **Contribution JSON (check after enabling Pages):** https://kardelenssu.github.io/vistula-task-manager/contribution.json
+- **Application URL :** https://kardelenssu.github.io/vistula-task-manager/
+- **Contribution page :** https://kardelenssu.github.io/vistula-task-manager/contribution.html
+- **Contribution JSON :** https://kardelenssu.github.io/vistula-task-manager/contribution.json
 
-> **Course account requirement:** The assignment specifies a dedicated GitHub username in the format `vistula-team-project-72564`. The current account `kardelenssu` does **not** match that format. Confirm acceptance with the instructor or use the dedicated account. Under that username, the expected application URL would be `https://vistula-team-project-72564.github.io/vistula-task-manager/`.
+
 
 ## Features
 
