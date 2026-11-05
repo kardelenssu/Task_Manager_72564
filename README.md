@@ -110,6 +110,6 @@ For the outgoing contribution to student **73195**'s repository, the correspondi
 ### Merged Pull Request links
 
 - **Incoming PR (73195 → 72564):** https://github.com/vistula-team-project-73195/vistula-task-manager/pull/2)
-- **Outgoing PR (72564 → 73195):** _ — add merged PR URL_
+- **Outgoing PR (72564 → 73195):*   https://github.com/vistula-team-project-73195/vistula-task-manager/pull/4)
 
 
