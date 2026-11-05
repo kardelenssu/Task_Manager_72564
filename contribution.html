@@ -32,6 +32,7 @@
     const output = document.getElementById('contributor-student-id');
 
     loadButton.addEventListener('click', async () => {
+      loadButton.disabled = true;
       output.textContent = 'Loading contributor...';
       try {
         const response = await fetch('contribution.json', { cache: 'no-store' });
@@ -42,9 +43,12 @@
         if (!data || !data.contributorStudentId) {
           throw new Error('Missing contributorStudentId in contribution.json');
         }
-        output.textContent = `Contributor Student ID: ${data.contributorStudentId}`;
+        const name = typeof data.contributorName === 'string' && data.contributorName.trim() ? ` (${data.contributorName.trim()})` : '';
+        output.textContent = `Contributor Student ID: ${data.contributorStudentId}${name}`;
       } catch (error) {
         output.textContent = `Error: ${error.message}`;
+      } finally {
+        loadButton.disabled = false;
       }
     });
   </script>
