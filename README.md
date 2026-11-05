@@ -112,9 +112,9 @@ https://github.com/vistula-team-project-73195/vistula-task-manager/pull/5
 
 https://github.com/vistula-team-project-73195/vistula-task-manager/pull/6
 
- vistula-team-project-72564/vistula-task-manager#3
+https://github.com/vistula-team-project-72564/vistula-task-manager/pull/3
 
-vistula-team-project-72564/vistula-task-manager#4
+https://github.com/vistula-team-project-72564/vistula-task-manager/pull/4
 
 
 forked -https://github.com/kardelenssu/vistula-task-manager-_fork
