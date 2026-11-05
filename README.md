@@ -105,11 +105,16 @@ For this repository, `contribution.json` must contain the contributor's ID, **73
 
 For the outgoing contribution to student **73195**'s repository, the corresponding JSON must instead contain **72564**. Both contributions must be created through genuine Pull Requests from the respective students' accounts, reviewed, and merged by the receiving repository owners.
 
-**Important:** The contributor files are already present in this repository, but their presence alone does not establish the required merged Pull Request history. Coordinate with your partner before replacing files, and do not record a Pull Request as complete without a real merged PR link.
+
 
 ### Merged Pull Request links
+https://github.com/vistula-team-project-73195/vistula-task-manager/pull/5
 
-- **Incoming PR (73195 → 72564):** https://github.com/vistula-team-project-73195/vistula-task-manager/pull/2)
-- **Outgoing PR (72564 → 73195):*   https://github.com/vistula-team-project-73195/vistula-task-manager/pull/4)
+https://github.com/vistula-team-project-73195/vistula-task-manager/pull/6
+
+ vistula-team-project-72564/vistula-task-manager#3
+
+vistula-team-project-72564/vistula-task-manager#4
+
 
 forked -https://github.com/kardelenssu/vistula-task-manager-_fork
